@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+    </head>
+    <body style="background-color: #c6effa; font-family: Times New Roman; padding: 20px;">
+    <div style="text-align: center;">
+    <img src="DeLong.jpg">
+    <h1 style="color: black; border-bottom: 2px solid gray; padding-bottom: 10px;"> Travel Expense Export </h1>
+    <form>
+    <table border="0" cellpadding="10" cellspacing="0" style="margin:auto">
+    <tr>
+        <td>
+            <label for="First_name">1) First Name:</label>
+        </td>
+        <td>
+            <input type="text" id="First_name" name="First_name" style="width: 150px;">
+        </td>
+        <td style="padding-left: 20px;">
+            <label for="Last_name">Last Name:</label>
+        </td>
+        <td>
+            <input type="text" id="Last_name" name="Last_name" style="width: 150px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="Social Security Number">2) Social Security Number:</label>
+        </td>
+        <td>
+            <input type="text" id="Social Security Number" name="Social Security Number" style="width: 150px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="Department">Department:</label>
+        </td>
+        <td colspan="5">
+            <select name="Department" id="Department" style="width: 200px;">
+                <option value="accounting">Accounting</option>
+                <option value="hr">HR</option>
+                <option value="it">IT</option>
+                <option value="marketing">Marketing</option>
+                <option value="sales">Sales</option>                         
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="6" style="text-align: left;">
+            <label for="Purpose">4) Describe the purpose of your trip.</label><br>
+            <textarea id="Purpose" name="Purpose" style="width: 500px; height: 100px; margin-top: 5px; resize: none;"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <label>5) Itemize your travel expenses</label>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; max-width: 650px; border-collapse: collapse; background-color: #e2f7fc; border-color: #7f9db9; text-align: center;">
+                <tr style="background-color: #e2f7fc;">
+                    <th style="width: 20%; font-weight: normal;">Date</th>
+                    <th style="width: 45%; font-weight: normal;">Description</th>
+                    <th style="width: 20%; font-weight: normal;">Category</th>
+                    <th style="width: 15%; font-weight: normal;">Amount</th>
+                </tr>
+                <tr>
+                    <td><input type="date" name="date1" style="width: 95%;"></td>
+                    <td><input type="text" name="desc1" style="width: 95%;"></td>
+                    <td>
+                        <select name="cate1" style="width: 95%;">
+                            <option value="meal">Meal</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="transport">Transport</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="amount1" style="width: 95%;"></td>
+                </tr>
+                <tr>
+                    <td><input type="date" name="date2" style="width: 95%;"></td>
+                    <td><input type="text" name="desc2" style="width: 95%;"></td>
+                    <td>
+                        <select name="cate2" style="width: 95%;">
+                            <option value="meal">Meal</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="transport">Transport</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="amount2" style="width: 95%;"></td>
+                </tr>
+                <tr>
+                    <td><input type="date" name="date3" style="width: 95%;"></td>
+                    <td><input type="text" name="desc3" style="width: 95%;"></td>
+                    <td>
+                        <select name="cate3" style="width: 95%;">
+                            <option value="meal">Meal</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="transport">Transport</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="amount3" style="width: 95%;"></td>
+                </tr>
+                <tr>
+                    <td><input type="date" name="date4" style="width: 95%;"></td>
+                    <td><input type="text" name="desc4" style="width: 95%;"></td>
+                    <td>
+                        <select name="cate4" style="width: 95%;">
+                            <option value="meal">Meal</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="transport">Transport</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="amount4" style="width: 95%;"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            6) Have you submitted your receipts? 
+            <input type="radio" name="receipt" id="receipt_yes" value="yes">
+            <label for="receipt_yes">Yes</label>
+            <input type="radio" name="receipt" id="receipt_no" value="no">
+            <label for="receipt_no">No</label>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4" style="padding-top: 15px;">
+            <input type="submit" value="Submit travel expenses" onclick="alert('Da submit thanh cong!'); return false;">
+            <input type="reset" value="Reset">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4" style="padding-top: 15px; font-size: 15px;">
+            Questions? Contact Debbie Larson in Accounting (ext. 2150).
+        </td>
+    </tr>
+    </table> 
+        </form>
+        
+    </div>
+    </body>
+    
+</html>
