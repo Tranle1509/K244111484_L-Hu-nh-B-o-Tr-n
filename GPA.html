@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script>
+        function updateFields()
+            {
+                course = document.gqaform.courseSelect.value;
+                
+                if(course == "course3") {
+                    document.getElementById("row_t").style.display = "";
+                } else {
+                    document.getElementById("row_t").style.display = "none";
+                }
+                
+                if(course == "course1") {
+                    document.getElementById("qt").innerText = "(30%)";
+                    document.getElementById("gk").innerText = "(20%)";
+                    document.getElementById("ck").innerText = "(50%)";
+                }
+                if(course == "course2") {
+                    document.getElementById("qt").innerText = "(25%)";
+                    document.getElementById("gk").innerText = "(25%)";
+                    document.getElementById("ck").innerText = "(50%)";
+                }
+                if(course == "course3") {
+                    document.getElementById("qt").innerText = "(15%)";
+                    document.getElementById("gk").innerText = "(20%)";
+                    document.getElementById("ck").innerText = "(50%)";
+                    document.getElementById("t").innerText = "(15%)";
+                }
+            }
+
+            function calculate()
+            {
+                course = document.gqaform.courseSelect.value;
+                
+                progress = eval(document.gqaform.qt.value);
+                midterm = eval(document.gqaform.gk.value);
+                final = eval(document.gqaform.ck.value);
+                
+                gpa = 0;
+
+                if(course == "course1") {
+                    gpa = (progress * 0.3) + (midterm * 0.2) + (final * 0.5);
+                }
+                else if(course == "course2") {
+                    gpa = (progress * 0.25) + (midterm * 0.25) + (final * 0.5);
+                }
+                else if(course == "course3") {
+                    t = eval(document.gqaform.t.value);
+                    gpa = (progress * 0.15) + (midterm * 0.20) + (final * 0.5) + (t * 0.15);
+                }
+
+                document.gqaform.gpa.value = gpa.toFixed(2);
+                result2.innerHTML = "<b>" + gpa.toFixed(2) + "</b>";
+            }
+
+            function clearForm()
+            {
+                document.gqaform.reset();
+                result2.innerHTML = "";
+            }
+        </script>
+    </head>
+    <body>
+        <div style="text-align: center;">
+        <h3>GPA Calculation</h3>
+        <form name="gqaform">
+            <table border="0" cellpadding="5" align="center">
+                <tr>
+                    <td>Select Course:</td>
+                    <td>
+                            <select name="courseSelect" onchange="updateFields()">
+                                <option value="course1">Course 1</option>
+                                <option value="course2">Course 2</option>
+                                <option value="course3">Course 3</option>
+                            </select>
+                        </td>
+                </tr>
+                    <tr>
+                        <td>Process:</td>
+                        <td><input type="text" name="qt"></td>
+                        <td><span id="qt"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Midterm:</td>
+                        <td><input type="text" name="gk"></td>
+                        <td><span id="gk"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Final:</td>
+                        <td><input type="text" name="ck"></td>
+                        <td><span id="ck"></span></td>
+                    </tr>
+                    <tr id="row_t">
+                        <td>T class:</td>
+                        <td><input type="text" name="t"></td>
+                        <td><span id="t"></span></td>
+                    </tr>
+                    <tr>
+                        <td>GPA:</td>
+                        <td><input type="text" name="gpa" readonly></td>
+                        <td><span id="result2"></span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="center">
+                            <input type="button" value="Calculate" onclick="calculate()">
+                            |
+                            <input type="reset" value="Clear" onclick="clearForm()">
+                        </td>
+
+            
+        </table>
+        </form>
+
+    </body>
+</html>
