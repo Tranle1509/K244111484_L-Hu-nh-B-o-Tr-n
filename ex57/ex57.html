@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Exercise 57: Handle the text change event</title>
+        <script>
+            function calculateRow1() {
+                price = parseFloat(cell_price1.innerText);
+                qty = parseFloat(txt_qty1.value);
+                
+                if (isNaN(qty) || qty < 0) {
+                    txt_item1.value = "";
+                    return;
+                }
+                txt_item1.value = (price * qty).toFixed(2);
+            }
+
+            function calculateRow2() {
+                price = parseFloat(cell_price2.innerText);
+                qty = parseFloat(txt_qty2.value);
+                
+                if (isNaN(qty) || qty < 0) {
+                    txt_item2.value = "";
+                    return;
+                }
+                txt_item2.value = (price * qty).toFixed(2);
+            }
+
+            function calculateRow3() {
+                price = parseFloat(cell_price3.innerText);
+                qty = parseFloat(txt_qty3.value);
+                
+                if (isNaN(qty) || qty < 0) {
+                    txt_item3.value = "";
+                    return;
+                }
+                txt_item3.value = (price * qty).toFixed(2);
+            }
+
+            function calculateTotal() {
+                item1 = parseFloat(txt_item1.value);
+                item2 = parseFloat(txt_item2.value);
+                item3 = parseFloat(txt_item3.value);
+
+                if (isNaN(item1)) item1 = 0;
+                if (isNaN(item2)) item2 = 0;
+                if (isNaN(item3)) item3 = 0;
+
+                total = item1 + item2 + item3;
+                txt_total.value = total.toFixed(2);
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Part Number</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Item table</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="center">C112</td>
+                    <td align="center">Mouse</td>
+                    <td align="center" id="cell_price1">19.95$</td>
+                    <td><input type="text" id="txt_qty1" oninput="calculateRow1()"></td>
+                    <td><input type="text" id="txt_item1" readonly></td>
+                </tr>
+                <tr>
+                    <td align="center">B124</td>
+                    <td align="center">Keyboard US</td>
+                    <td align="center" id="cell_price2">29.95$</td>
+                    <td><input type="text" id="txt_qty2" oninput="calculateRow2()"></td>
+                    <td><input type="text" id="txt_item2" readonly></td>
+                </tr>
+                <tr>
+                    <td align="center">U125</td>
+                    <td align="center">USB KingMax</td>
+                    <td align="center" id="cell_price3">39.95$</td>
+                    <td><input type="text" id="txt_qty3" oninput="calculateRow3()"></td>
+                    <td><input type="text" id="txt_item3" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="5" align="right">
+                        Total: <input type="text" id="txt_total" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" align="right">
+                        <button type="button" onclick="calculateTotal()" style="background-color: #FFC000; font-weight: bold; padding: 5px 15px;">Sum</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
