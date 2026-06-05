@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Tiêu đề</title>
+        <script>
+            function calculateMax() {
+                a = parseFloat(txt_a.value);
+                b = parseFloat(txt_b.value);
+                c = parseFloat(txt_c.value);
+                max = Math.max(a, b, c);
+                txt_result.value = max;
+            }
+
+            function calculateMin() {
+                a = parseFloat(txt_a.value);
+                b = parseFloat(txt_b.value);
+                c = parseFloat(txt_c.value);
+                min = Math.min(a, b, c);
+                txt_result.value = min;
+            }
+
+            function calculateSin() {
+                a = parseFloat(txt_a.value);
+                radians = a * (Math.PI / 180);
+                txt_result.value = Math.sin(radians);
+            }
+
+            function calculateCos() {
+                a = parseFloat(txt_a.value);
+                radians = a * (Math.PI / 180);
+                txt_result.value = Math.cos(radians);
+            }
+
+            function calculatePower() {
+                a = parseFloat(txt_a.value);
+                b = parseFloat(txt_b.value);
+                power = Math.pow(a, b);
+                txt_result.value = power;
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <td>a:</td>
+                <td><input type="text" id="txt_a" ></td>
+            </tr>
+            <tr>
+                <td>b:</td>
+                <td><input type="text" id="txt_b" ></td>
+            </tr>
+            <tr>
+                <td>c:</td>
+                <td><input type="text" id="txt_c" ></td>
+            </tr>
+            <tr>
+                <td>Result:</td>
+                <td><input type="text" id="txt_result" readonly style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="button" onclick="calculateMax()">MAX</button>
+                    <button type="button" onclick="calculateMin()">MIN</button>
+                    <button type="button" onclick="calculateSin()">sin(a)</button>
+                    <button type="button" onclick="calculateCos()">Cos(a)</button>
+                    <button type="button" onclick="calculatePower()">a^b</button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
