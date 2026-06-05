@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script>
+            function findSolution() {
+                a = parseFloat(txt_a.value);
+                b = parseFloat(txt_b.value);
+                c = parseFloat(txt_c.value);
+
+                if (a == 0) {
+                    if (b == 0) {
+                        if (c == 0) {
+                            txt_result.value = "Infinitely many solutions";
+                        } else {
+                            txt_result.value = "No solution";
+                        }
+                    } else {
+                        x = -c / b;
+                        txt_result.value = "x = " + x;
+                    }
+                } else {
+                    delta = b * b - 4 * a * c;
+                    if (delta < 0) {
+                        txt_result.value = "No solution";
+                    } else if (delta == 0) {
+                        x = -b / (2 * a);
+                        txt_result.value = "x1 = x2 = " + x;
+                    } else {
+                        x1 = (-b - Math.sqrt(delta)) / (2 * a);
+                        x2 = (-b + Math.sqrt(delta)) / (2 * a);
+                        txt_result.value = "x1=" + x1 + " ; x2=" + x2;
+                    }
+                }
+            }
+
+            function clearFields() {
+                txt_a.value = "";
+                txt_b.value = "";
+                txt_c.value = "";
+                txt_result.value = "";
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1">        
+                <tr>
+                    <th colspan="2" style="background-color: #7fe8a5;">The quadratic equation</th> 
+                </tr>
+                <tr>
+                    <td>a:</td>
+                    <td><input type="text" id="txt_a"></td>
+                </tr>
+                <tr>
+                    <td>b:</td>
+                    <td><input type="text" id="txt_b"></td>
+                </tr>
+                <tr>
+                    <td>c:</td>
+                    <td><input type="text" id="txt_c"></td>
+                </tr>
+                <tr>
+                <td>Result:</td>
+                <td><input type="text" id="txt_result" readonly style="width: 100%; color: red; font-weight: bold;"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="button" onclick="findSolution()">Find solution</button>
+                    <button type="button" onclick="clearFields()">Clear</button>
+                </td>
+            </tr>
+                
+        </table>
+    </body>
+</html>
