@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Member Registration</h1>
+    
+    <form id="regForm">
+        <div class="form-group">
+            <label for="txtName">Name(*)</label>
+            <input type="text" id="txtName" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Birthday(*)</label>
+            Day: <select id="selDay"></select>
+            Month: <select id="selMonth"></select>
+            Year: <select id="selYear"></select>
+        </div>
+        
+        <div class="form-group">
+            <label>Gender(*)</label>
+            <input type="radio" name="gender" value="Man" id="genderMan" checked> 
+            <label for="genderMan" class="label-inline">Man</label>
+            <input type="radio" name="gender" value="Woman" id="genderWoman"> 
+            <label for="genderWoman" class="label-inline">Woman</label>
+        </div>
+        
+        <div class="form-group">
+            <label for="txtEmail">Email(*)</label>
+            <input type="email" id="txtEmail" required>
+        </div>
+        
+        <div class="form-group">
+            <label class="label-block">Your favorite:</label>
+            <div class="checkbox-group"><input type="checkbox" name="hobby" value="Shopping" id="chk1"> <label class="label-inline" for="chk1">Shopping</label></div>
+            <div class="checkbox-group"><input type="checkbox" name="hobby" value="Tourism" id="chk2"> <label class="label-inline" for="chk2">Tourism</label></div>
+            <div class="checkbox-group"><input type="checkbox" name="hobby" value="Chat" id="chk3"> <label class="label-inline" for="chk3">Chat</label></div>
+            <div class="checkbox-group"><input type="checkbox" name="hobby" value="Read a book" id="chk4"> <label class="label-inline" for="chk4">Read a book</label></div>
+            <div class="checkbox-group"><input type="checkbox" name="hobby" value="Listening to music" id="chk5"> <label class="label-inline" for="chk5">Listening to music</label></div>
+        </div>
+        
+        <div class="form-group">
+            <label class="label-block">Your favorite color:</label>
+            <div class="radio-group"><input type="radio" name="favColor" value="Blue" id="c1" checked> <span class="color-label color-blue">Blue</span></div>
+            <div class="radio-group"><input type="radio" name="favColor" value="Red" id="c2"> <span class="color-label color-red">Red</span></div>
+            <div class="radio-group"><input type="radio" name="favColor" value="Yellow" id="c3"> <span class="color-label color-yellow">Yellow</span></div>
+            <div class="radio-group"><input type="radio" name="favColor" value="Green" id="c4"> <span class="color-label color-green">Green</span></div>
+            <div class="radio-group"><input type="radio" name="favColor" value="Violet" id="c5"> <span class="color-label color-violet">Violet</span></div>
+        </div>
+        
+        <div class="btn-group">
+            <button type="button" id="btnSignUp">Sign up</button>
+            <button type="button" id="btnReset">Reset</button>
+        </div>
+    </form>
+    
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Birthday</th>
+                <th>Hobbies</th>
+                <th>Colors</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>john@gmail.com</td>
+                <td>Man</td>
+                <td>02/02/1990</td>
+                <td>Reading</td>
+                <td>Yellow</td>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>peter@gmail.com</td>
+                <td>Man</td>
+                <td>01/01/1992</td>
+                <td>chat, reading</td>
+                <td>Red</td>
+            </tr>
+            <tr>
+                <td>Lucy</td>
+                <td>lucy@gmail.com</td>
+                <td>Woman</td>
+                <td>01/02/2005</td>
+                <td>Listening, Chat</td>
+                <td>Violet</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

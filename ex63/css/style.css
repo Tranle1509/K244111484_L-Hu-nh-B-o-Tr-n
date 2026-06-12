@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.container {
+    max-width: 600px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+.form-group {
+    margin-bottom: 12px;
+}
+.form-group > label:not(.label-block):not(.label-inline) {
+    display: inline-block;
+    width: 100px;
+}
+.form-group input[type="text"], .form-group input[type="email"] {
+    width: 250px;
+    padding: 3px;
+}
+.checkbox-group, .radio-group {
+    margin-left: 100px;
+    margin-bottom: 5px;
+}
+.label-block {
+    display: block;
+    width: 100%;
+}
+.label-inline {
+    display: inline;
+    width: auto;
+}
+.color-label {
+    padding: 2px 5px;
+    font-weight: bold;
+}
+.color-blue { background-color: blue; color: white; }
+.color-red { background-color: red; color: white; }
+.color-yellow { background-color: yellow; color: black; }
+.color-green { background-color: green; color: white; }
+.color-violet { background-color: violet; color: black; }
+
+.btn-group {
+    margin-top: 15px;
+    margin-left: 100px;
+}
+button {
+    padding: 5px 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: left;
+}
+th {
+    background-color: blue;
+    color: white;
+}
+.row-hover {
+    background-color: yellow !important;
+}
+.row-normal {
+    background-color: white;
+}
